@@ -1,0 +1,28 @@
+// placeholder와 mixin은 반복되는 스타일을 계속해서 선언하지 않겠다는 공통점은 있지만, 용도가 다름.
+// mixin은 인자를 받을 수 있지만(@mixin pos-center-x($type)), placeholder는 인자를 받을 수 없음. 확장성이 떨어짐.
+// mixin은 @include. placeholder는 @extend
+
+%tag-base {
+  @include inline-flexbox;
+  @include text-style(12);
+  height: 20px;
+  padding: 0 6px;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.tag-red {
+  @extend %tag-base;
+  color: $white;
+  background-color: $red;
+}
+.tag-green {
+  @extend %tag-base;
+  color: $white;
+  background-color: $green;
+}
+.tag-gray {
+  @extend %tag-base;
+  color: $secondary;
+  background-color: $border;
+}
