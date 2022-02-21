@@ -1,0 +1,42 @@
+// mixin과 function의 차이점 : mixin은 @include를 통해서, function은 바로 사용 가능. mixin은 코드 자체를, function은 어떠한 특정 값을 반환함.
+// 새로운 data-type > Map = {}. key: value의 형태.
+
+$flex-map: (
+  start: flex-start,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  stretch: stretch,
+  center: center,
+
+  // flex-start > start
+  // flex-end > end
+  // space-between > between
+  // space-around > around
+  // stretch > stretch
+  // center > center
+);
+
+@function _get-flex-value($key) {
+  @return map-get($flex-map, $key);
+  // sass의 내장함수
+}
+
+@mixin flexbox($jc:center, $ai:center) {
+  display: flex;
+  align-items: _get-flex-value($ai);
+  justify-content: _get-flex-value($jc);
+}
+
+@mixin inline-flexbox($jc:center, $ai:center) {
+  display: flex;
+  align-items: _get-flex-value($ai);
+  justify-content: _get-flex-value($jc);
+}
+
+@mixin column-flexbox($jc:center, $ai:center) {
+  display: flex;
+  flex-direction: column;
+  align-items: _get-flex-value($ai);
+  justify-content: _get-flex-value($jc);
+}
