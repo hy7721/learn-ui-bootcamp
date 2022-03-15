@@ -1,6 +1,7 @@
 @import './constants/colors';
 @import './constants/typography';
 @import './constants/breakpoints';
+// 변수와 관련된 상수는 최상위에 위치시킬 것.
 
 @import './base/fonts';
 @import './base/normalize';
@@ -22,3 +23,4 @@
 @import './modules/icons';
 
 @import './layouts/grids';
+@import './layouts/gnb'
