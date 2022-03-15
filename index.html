@@ -13,21 +13,26 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3da5f5" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css"
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <body>
     <header class="gnb">
       <div class="container">
         <div class="row">
           <div class="col-sm-4">
+            <!-- col-sm-4 = col-md-12 = col-lg-12 이기 때문에 col-sm-4만 작성하고 나머지는 생략 가능. -->
             <div class="gnb-left">
               <h1 class="logo">
                 <a href="/">
@@ -35,7 +40,7 @@
                 </a>
               </h1>
 
-              <nav class="sm-hidden">
+              <nav class="gnb-nav sm-hidden">
                 <h2 class="visually-hidden">메뉴</h2>
                 <ul class="gnb-nav-list">
                   <li class="gnb-nav-item"><a href="/">커뮤니티</a></li>
