@@ -1,10 +1,20 @@
 .gnb-nav {
   &-list {
     @include flexbox(start);
+    margin-left: -8px;
+    // margin-left: -#($padding);
+    // 이용자를 위해 padding 만큼 anchor 영역을 늘리면서 간격이 24px+8px 만큼 늘어남
   }
 
   &-item {
     margin-right: 24px;
+
+    &.is-active,
+    &:hover {
+      a {
+        color: $blue;
+      }
+    }
 
     &:last-child {
       margin-right: 0;
@@ -12,6 +22,9 @@
 
     a {
       @include text-style(18, $primary);
+      display: block;
+      padding: 8px;
+      // padding: $padding;
       font-weight: 700;
     }
   }
